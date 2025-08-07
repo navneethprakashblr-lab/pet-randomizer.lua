@@ -1,0 +1,23 @@
+-- Remote Spy (Client-Side Only)
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local namecall
+namecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    local args = {...}
+
+    if not checkcaller() then
+        if method == "FireServer" or method == "InvokeServer" then
+            print("📡 Remote called:")
+            print(" → Remote:", self:GetFullName())
+            print(" → Method:", method)
+            print(" → Arguments:")
+            for i,v in ipairs(args) do
+                print("    ["..i.."] = ", v)
+            end
+            print("---------")
+        end
+    end
+
+    return namecall(self, ...)
+end))
