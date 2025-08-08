@@ -8,7 +8,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local player = Players.LocalPlayer
 
 local placeId = 9872472334
-local accessCode = "6ecc336c-ff8c-4d3b-bd70-94e35c571d11" -- << Replace this if needed
+local accessCode = "Ofe98fa9-cfdc-4281-bb9a-fd4039676e98" -- << Replace this if needed
 
 TeleportService:TeleportToPrivateServer(placeId, accessCode, {player})
 
